@@ -165,7 +165,9 @@ export default function App() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.72rem", color: "var(--text3)", fontFamily: "DM Mono, monospace" }}>
             <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#34d399", boxShadow: "0 0 8px #34d39988" }}></div>
-            llama-3.3-70b · groq
+            <a href="https://github.com/Rohan29-De/Neo" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text3)", textDecoration: "underline" }}>
+              Rohan29-De
+            </a>
           </div>
         </div>
       </header>
