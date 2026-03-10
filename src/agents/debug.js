@@ -1,3 +1,4 @@
+import { render } from "../render.js";
 import fs from "fs";
 import { ask } from "../claude.js";
 import chalk from "chalk";
@@ -26,5 +27,5 @@ ${code}
 
   const result = await ask(system, user);
   console.log(chalk.yellow("\n🐛 Neo's Debug Report:\n"));
-  console.log(result);
+  render(result);
 }

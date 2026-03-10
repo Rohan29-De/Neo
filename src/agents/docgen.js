@@ -1,3 +1,4 @@
+import { render } from "../render.js";
 import fs from "fs";
 import { ask } from "../claude.js";
 import chalk from "chalk";
@@ -19,7 +20,7 @@ Return the fully documented version of the code followed by a README section.`;
 
   const result = await ask(system, user);
   console.log(chalk.green("\n📄 Neo's Documentation:\n"));
-  console.log(result);
+  render(result);
 
   // Save to file
   const outPath = filePath.replace(`.${ext}`, `.documented.${ext}`);

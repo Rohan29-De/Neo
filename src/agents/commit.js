@@ -1,3 +1,4 @@
+import { render } from "../render.js";
 import { execSync } from "child_process";
 import { ask } from "../claude.js";
 import chalk from "chalk";
@@ -39,7 +40,7 @@ Return ONLY the commit message, nothing else.`;
   try {
     const result = await ask(system, user);
     console.log(chalk.blue("\n📝 Neo's Commit Message:\n"));
-    console.log(chalk.white(result));
+    render(result);
     console.log(chalk.gray('\n→ To use it: git commit -m "' + result.split("\n")[0] + '"'));
   } catch (err) {
     console.log(chalk.red("Error: " + err.message));

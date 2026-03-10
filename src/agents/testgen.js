@@ -1,3 +1,4 @@
+import { render } from "../render.js";
 import fs from "fs";
 import path from "path";
 import { ask } from "../claude.js";
@@ -22,7 +23,7 @@ Return ONLY the test code, no explanation.`;
 
   const result = await ask(system, user);
   console.log(chalk.magenta("\n🧪 Neo's Generated Tests:\n"));
-  console.log(result);
+  render(result);
 
   const outPath = path.join(path.dirname(filePath), `${fileName}.test.${ext}`);
   fs.writeFileSync(outPath, result);

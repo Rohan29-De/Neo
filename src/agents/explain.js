@@ -1,3 +1,4 @@
+import { render } from "../render.js";
 import fs from "fs";
 import { ask } from "../claude.js";
 import chalk from "chalk";
@@ -18,5 +19,5 @@ Be concise but thorough. Use sections: Overview, Key Functions, Data Flow, Gotch
 
   const result = await ask(system, user);
   console.log(chalk.cyan("\n🧠 Neo's Analysis:\n"));
-  console.log(result);
+  render(result);
 }
